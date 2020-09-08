@@ -1,6 +1,9 @@
 # Algorithms
 This repository is intended to be a small collection of common algorithms for educational and demonstration purposes. Implementations exist in several programing languages. Some implementations are meant to be simple and easy to read while others are optimized for performance.
 
+## Purpose
+This repository should be useful. It is NOT supposed to be a comprehensive collection of algorithms. Many such repositories exist. The purpose is to provide a concise set of interesting, useful, and/or noteworthy algorithms, preferably ones which have not been discussed ad nauseam. This repository is also the place for special implementations of common algorithms.
+
 ## Tests
 There are tests for algorithm correctness and performance.
 
