@@ -69,18 +69,18 @@ public class ZAlgorithm {
                 bestZIndex = index;
                 unexploredIndex = index + zArray[index];
             } else {
-                int unexploredRemaining = unexploredIndex - index;
+                int exploredRemaining = unexploredIndex - index;
                 int subIndex = index - bestZIndex;
 
-                if (zArray[subIndex] < unexploredRemaining) {
+                if (zArray[subIndex] < exploredRemaining) {
                     // We've seen this pattern before.
                     zArray[index] = zArray[subIndex];
-                } else if (zArray[subIndex] > unexploredRemaining) {
+                } else if (zArray[subIndex] > exploredRemaining) {
                     // This is part of a pattern we've seen before.
-                    zArray[index] = unexploredRemaining;
+                    zArray[index] = exploredRemaining;
                 } else {
                     // We've seen this pattern, and possibly more.
-                    zArray[index] = matchLength(s, index, unexploredRemaining);
+                    zArray[index] = matchLength(s, index, exploredRemaining);
                     bestZIndex = index;
                     unexploredIndex = index + zArray[index];
                 }
