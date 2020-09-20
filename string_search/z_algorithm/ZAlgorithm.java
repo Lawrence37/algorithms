@@ -18,7 +18,11 @@ public class ZAlgorithm {
     public static List<Integer> indicesOf(String string, String pattern) {
         List<Integer> indices = new ArrayList<>();
 
-        if (string.length() < pattern.length()) {
+        if (
+            string == null
+            || pattern == null
+            || string.length() < pattern.length()
+        ) {
             return indices;
         }
 
@@ -48,6 +52,10 @@ public class ZAlgorithm {
 
     /** Calculates and returns the Z array for the given string. */
     public static int[] zArray(String s) {
+        if (s == null) {
+            return new int[0];
+        }
+
         int[] array = new int[s.length()];
         zArray(s, array, 0, s.length());
         return array;
