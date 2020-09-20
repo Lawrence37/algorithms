@@ -13,6 +13,7 @@ public class Test {
         testCorrectnessZ();
         testCorrectnessSearch1();
         testCorrectnessSearch2();
+        testCorrectnessSearch3();
         warmUp();
         testSpeedZ();
         testSpeedSearch1();
@@ -79,6 +80,16 @@ public class Test {
 
         assert indices.size() == REPETITIONS;
         assert (new HashSet<Integer>(indices)).size() == REPETITIONS;
+    }
+
+    private static void testCorrectnessSearch3() {
+        String s = "123412341234";
+        String pattern = "12341234";
+        List<Integer> indices = ZAlgorithm.indicesOf(s, pattern);
+
+        assert indices.size() == 2;
+        assert indices.contains(0);
+        assert indices.contains(4);
     }
 
     private static void testCorrectnessZ() {
