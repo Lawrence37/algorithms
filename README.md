@@ -15,6 +15,14 @@ g++ test.cpp -o test.out -O2
 ./test.out
 ```
 
+### Java
+This repository's directory structure does not fit the typical Java project file structure. Compile and run the code from the repository's parent directory. Execute with the `-ea` flag to enable asserts.
+```shell
+cd ..
+javac algorithms/TestUtils.java algorithms/string_search/z_algorithm/*.java
+java -ea algorithms.string_search.z_algorithm.Test
+```
+
 ### Python 3
 Python tests can be run from the repository’s root directory. Run the tests as modules with the `-m` flag.
 ```shell
